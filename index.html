@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>FOA Separation Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>FOA Sound Separation – Audio Examples</h1>
+      <p class="sub">
+        Each example contains: <b>Mixture</b>, <b>GT</b> and <b>Prediction</b> for two sources, plus a small waveform overview and a unit-circle direction plot to indicate DOA to the listener.
+        <br/>
+        <span class="hint">Headphones recommended. Audio levels may vary — start at a low volume. <br>Model outputs are FOA, rendered binaurally for listening. <br>FOA (ACN/SN3D) → N3D → magLS binaural decoder (order 1) using FABIAN HATO HRIRs (SOFA), rendered at 16 kHz.</span>
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ====== Example 01 ====== -->
+    <section class="card" id="ex01">
+      <div class="card-head">
+        <h2>Example 1</h2>
+        <p class="meta">Clearthroat + Key drop (overlapping)</p>
+      </div>
+
+      <div class="row">
+        <div class="label">Mixture</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex01/plots/wave_mixture.svg" alt="Mixture waveform">
+          <audio controls preload="none" src="ex01/audio/mixture_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex01/plots/wave_gt_s1.svg" alt="GT Source 1 waveform">
+          <audio controls preload="none" src="ex01/audio/gt_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex01/plots/wave_pred_s1.svg" alt="Pred Source 1 waveform">
+          <audio controls preload="none" src="ex01/audio/pred_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex01/plots/wave_gt_s2.svg" alt="GT Source 2 waveform">
+          <audio controls preload="none" src="ex01/audio/gt_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex01/plots/wave_pred_s2.svg" alt="Pred Source 2 waveform">
+          <audio controls preload="none" src="ex01/audio/pred_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="viz">
+        <figure>
+          <figcaption>Waveform overview</figcaption>
+          <img class="large-wave" src="ex01/plots/waveform.png" alt="Waveform overview (Example 1)" />
+        </figure>
+        <figure>
+          <figcaption>Directions (unit circle)</figcaption>
+          <img src="ex01/plots/circle_plot.svg" alt="Unit-circle DOA plot (Example 1)" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ====== Example 02 ====== -->
+    <section class="card" id="ex02">
+      <div class="card-head">
+        <h2>Example 2</h2>
+        <p class="meta">Keyboard + Laughter (overlapping)</p>
+      </div>
+
+      <div class="row">
+        <div class="label">Mixture</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex02/plots/wave_mixture.svg" alt="Mixture waveform (Example 2)">
+          <audio controls preload="none" src="ex02/audio/mixture_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex02/plots/wave_gt_s1.svg" alt="GT Source 1 waveform (Example 2)">
+          <audio controls preload="none" src="ex02/audio/gt_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex02/plots/wave_pred_s1.svg" alt="Pred Source 1 waveform (Example 2)">
+          <audio controls preload="none" src="ex02/audio/pred_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex02/plots/wave_gt_s2.svg" alt="GT Source 2 waveform (Example 2)">
+          <audio controls preload="none" src="ex02/audio/gt_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex02/plots/wave_pred_s2.svg" alt="Pred Source 2 waveform (Example 2)">
+          <audio controls preload="none" src="ex02/audio/pred_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="viz">
+        <figure>
+          <figcaption>Waveform overview</figcaption>
+          <img class="large-wave" src="ex02/plots/waveform.png" alt="Waveform overview (Example 2)" />
+        </figure>
+        <figure>
+          <figcaption>Directions (unit circle)</figcaption>
+          <img src="ex02/plots/circle_plot.svg" alt="Unit-circle DOA plot (Example 2)" />
+        </figure>
+      </div>
+
+      <div class="meta" style="margin-top:10px;">
+        Source 0: GT azimuth=153.582 deg, Pred azimuth=152.559 deg<br>
+        Source 1: GT azimuth=140.288 deg, Pred azimuth=152.254 deg
+      </div>
+    </section>
+
+    <!-- ====== Example 03 ====== -->
+    <section class="card" id="ex03">
+      <div class="card-head">
+        <h2>Example 3</h2>
+        <p class="meta">Key drop + Door slam (not overlapping)</p>
+      </div>
+
+      <div class="row">
+        <div class="label">Mixture</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex03/plots/wave_mixture.svg" alt="Mixture waveform (Example 3)">
+          <audio controls preload="none" src="ex03/audio/mixture_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex03/plots/wave_gt_s1.svg" alt="GT Source 1 waveform (Example 3)">
+          <audio controls preload="none" src="ex03/audio/gt_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex03/plots/wave_pred_s1.svg" alt="Pred Source 1 waveform (Example 3)">
+          <audio controls preload="none" src="ex03/audio/pred_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex03/plots/wave_gt_s2.svg" alt="GT Source 2 waveform (Example 3)">
+          <audio controls preload="none" src="ex03/audio/gt_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex03/plots/wave_pred_s2.svg" alt="Pred Source 2 waveform (Example 3)">
+          <audio controls preload="none" src="ex03/audio/pred_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="viz">
+        <figure>
+          <figcaption>Waveform overview</figcaption>
+          <img class="large-wave" src="ex03/plots/waveform.png" alt="Waveform overview (Example 3)" />
+        </figure>
+        <figure>
+          <figcaption>Directions (unit circle)</figcaption>
+          <img src="ex03/plots/circle_plot.svg" alt="Unit-circle DOA plot (Example 3)" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ====== Example 04 ====== -->
+    <section class="card" id="ex04">
+      <div class="card-head">
+        <h2>Example 4</h2>
+        <p class="meta">Knock + Drawer (overlapping)</p>
+      </div>
+
+      <div class="row">
+        <div class="label">Mixture</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex04/plots/wave_mixture.svg" alt="Mixture waveform (Example 4)">
+          <audio controls preload="none" src="ex04/audio/mixture_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex04/plots/wave_gt_s1.svg" alt="GT Source 1 waveform (Example 4)">
+          <audio controls preload="none" src="ex04/audio/gt_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex04/plots/wave_pred_s1.svg" alt="Pred Source 1 waveform (Example 4)">
+          <audio controls preload="none" src="ex04/audio/pred_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex04/plots/wave_gt_s2.svg" alt="GT Source 2 waveform (Example 4)">
+          <audio controls preload="none" src="ex04/audio/gt_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex04/plots/wave_pred_s2.svg" alt="Pred Source 2 waveform (Example 4)">
+          <audio controls preload="none" src="ex04/audio/pred_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="viz">
+        <figure>
+          <figcaption>Waveform overview</figcaption>
+          <img class="large-wave" src="ex04/plots/waveform.png" alt="Waveform overview (Example 4)" />
+        </figure>
+        <figure>
+          <figcaption>Directions (unit circle)</figcaption>
+          <img src="ex04/plots/circle_plot.svg" alt="Unit-circle DOA plot (Example 4)" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ====== Example 05 ====== -->
+    <section class="card" id="ex05">
+      <div class="card-head">
+        <h2>Example 5</h2>
+        <p class="meta">Drawer + Clearthroat (overlapping)</p>
+      </div>
+
+      <div class="row">
+        <div class="label">Mixture</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex05/plots/wave_mixture.svg" alt="Mixture waveform (Example 5)">
+          <audio controls preload="none" src="ex05/audio/mixture_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex05/plots/wave_gt_s1.svg" alt="GT Source 1 waveform (Example 5)">
+          <audio controls preload="none" src="ex05/audio/gt_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 0</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex05/plots/wave_pred_s1.svg" alt="Pred Source 1 waveform (Example 5)">
+          <audio controls preload="none" src="ex05/audio/pred_source_0_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">GT – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex05/plots/wave_gt_s2.svg" alt="GT Source 2 waveform (Example 5)">
+          <audio controls preload="none" src="ex05/audio/gt_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">Pred – Source 1</div>
+        <div class="stack">
+          <img class="mini-wave" src="ex05/plots/wave_pred_s2.svg" alt="Pred Source 2 waveform (Example 5)">
+          <audio controls preload="none" src="ex05/audio/pred_source_1_binaural.wav"></audio>
+        </div>
+      </div>
+
+      <div class="viz">
+        <figure>
+          <figcaption>Waveform overview</figcaption>
+          <img class="large-wave" src="ex05/plots/waveform.png" alt="Waveform overview (Example 5)" />
+        </figure>
+        <figure>
+          <figcaption>Directions (unit circle)</figcaption>
+          <img src="ex05/plots/circle_plot.svg" alt="Unit-circle DOA plot (Example 5)" />
+        </figure>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+Demo for Poster Presentation. Thomas W. M. Landl (JKU), 2026.  
+Adapted MixIT sound separation model
+(<a href="https://proceedings.neurips.cc/paper_files/paper/2020/file/28538c394c36e4d5ea8ff5ad60562a93-Paper.pdf">MixIT</a> by Scott Wisdom et al.;
+implementation based on
+<a href="https://doi.org/10.1109/LSP.2022.3232276">Karamatlı et al.</a>),
+trained on snippets of the TAU Spatial Audio Events 2019 Ambisonic dataset
+(<a href="https://doi.org/10.5281/zenodo.2580090">Adavanne et al.</a>).
+</p>
+    </footer>
+  </main>
+</body>
+</html>
